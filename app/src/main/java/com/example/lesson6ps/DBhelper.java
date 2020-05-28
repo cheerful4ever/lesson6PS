@@ -51,7 +51,6 @@ public class DBhelper extends SQLiteOpenHelper {
     }
 
     public ArrayList<Task> getTasks() {
-        //TODO return records in Java objects
 
         ArrayList<Task> toDos = new ArrayList<Task>();
         String selectQuery = "SELECT " + COLUMN_ID + ", "
