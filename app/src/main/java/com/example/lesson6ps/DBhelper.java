@@ -52,7 +52,7 @@ public class DBhelper extends SQLiteOpenHelper {
 
     public ArrayList<Task> getTasks() {
 
-        ArrayList<Task> toDos = new ArrayList<Task>();
+        ArrayList<Task> taskss = new ArrayList<Task>();
         String selectQuery = "SELECT " + COLUMN_ID + ", "
                 + COLUMN_TASK_NAME + ", "
                 + COLUMN_DESCRIPTION
@@ -64,15 +64,15 @@ public class DBhelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 int id = cursor.getInt(0);
-                String date = cursor.getString(1);
-                String data = cursor.getString(2);
-                Task obj = new Task(id, date, data);
-                toDos.add(obj);
+                String name = cursor.getString(1);
+                String description = cursor.getString(2);
+                Task obj = new Task(id, name, description);
+                taskss.add(obj);
             } while (cursor.moveToNext());
         }
         cursor.close();
         db.close();
-        return toDos;
+        return taskss;
     }
 
 }
