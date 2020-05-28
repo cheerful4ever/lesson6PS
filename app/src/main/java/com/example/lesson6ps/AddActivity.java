@@ -45,7 +45,7 @@ public class AddActivity extends AppCompatActivity {
                 cal.add(Calendar.SECOND, 5);
 
                 Intent intent = new Intent(AddActivity.this,
-                        BroadcastReceiver.class);
+                        DUMBReceiver.class);
                 String[] info = {name, description};
                 intent.putExtra("info", info);
                 sendBroadcast(intent);

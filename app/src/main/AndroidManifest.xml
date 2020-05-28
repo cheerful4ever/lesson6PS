@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <receiver
-            android:name=".BroadcastReceiver"
+            android:name=".DUMBReceiver"
             android:enabled="true"
             android:exported="true"></receiver>
+        <receiver
+            android:name=".BroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
 
         <activity android:name=".AddActivity" />
         <activity android:name=".MainActivity">
